@@ -35,3 +35,17 @@ const handleClick = (e, arr) => {
     char.textContent = arr.character
     quote.textContent = `Full Quote: "${arr.full_line}"`
 }
+
+
+//Movie info on load
+fetch("https://owen-wilson-wow-api.herokuapp.com/wows/ordered/29")
+.then(res => res.json())
+.then(arr => onLoadMovie(arr))
+
+function onLoadMovie(arr) {
+    poster.src = arr.poster
+    name.textContent = arr.movie
+    yr.textContent = arr.year
+    char.textContent = arr.character
+    quote.textContent = `Full Quote: "${arr.full_line}"`
+}
