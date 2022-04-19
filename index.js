@@ -12,11 +12,16 @@ let name = document.querySelector('#name')
 let yr = document.querySelector('#year')
 let char = document.querySelector('#character')
 let quote = document.querySelector('#quote')
+let video = document.querySelector('#video')
+let audio = document.querySelector('#audio')
+console.log(video)
+console.log(audio)
+
 
 // Render Functions
 
 const displayMovie = (arr) => {
-    console.log(arr)
+    //console.log(arr)
    let div = document.querySelector('#top-list')
    let img = document.createElement('img')
    img.classList.add('new-poster')
@@ -28,7 +33,7 @@ const displayMovie = (arr) => {
 }
 
 const handleClick = (e, arr) => {
-    console.log(arr)
+    //console.log(arr)
     poster.src = arr.poster
     name.textContent = arr.movie
     yr.textContent = arr.year
@@ -48,4 +53,7 @@ function onLoadMovie(arr) {
     yr.textContent = arr.year
     char.textContent = arr.character
     quote.textContent = `Full Quote: "${arr.full_line}"`
+    video.src = arr.video['1080p']
+    audio.src = arr.audio
+    console.log(arr.video['1080p'])
 }
