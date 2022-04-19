@@ -39,8 +39,8 @@ const displayMovie = (arr) => {
 function onLoadMovie(arr) {
     poster.src = arr.poster
     movieName.textContent = arr.movie
-    yr.textContent = arr.year
-    char.textContent = arr.character
+    yr.textContent = `Released: ${arr.year}`
+    char.textContent = `Character: ${arr.character}`
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
@@ -53,8 +53,8 @@ const handleClick = (e, arr) => {
     //console.log(arr)
     poster.src = arr.poster
     movieName.textContent = arr.movie
-    yr.textContent = arr.year
-    char.textContent = arr.character
+    yr.textContent = `Released: ${arr.year}`
+    char.textContent = `Character: ${arr.character}`
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
