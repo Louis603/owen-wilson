@@ -12,6 +12,8 @@ let name = document.querySelector('#name')
 let yr = document.querySelector('#year')
 let char = document.querySelector('#character')
 let quote = document.querySelector('#quote')
+let video = document.querySelector('#video')
+let audio = document.querySelector('#audio')
 
 // Render Functions
 
@@ -34,4 +36,8 @@ const handleClick = (e, arr) => {
     yr.textContent = arr.year
     char.textContent = arr.character
     quote.textContent = `Full Quote: "${arr.full_line}"`
+    console.log(video)
+    console.log(audio)
+    video.src = arr.video['1080p']
+    audio.src = arr.audio
 }
