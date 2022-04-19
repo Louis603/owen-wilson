@@ -27,3 +27,13 @@ body {
 #poster {
     text-align: center;
 }
+
+.gif-left{
+    float: left;
+    padding-left: 30%;
+}
+
+#video {
+    display: flex;
+    position: absolute;
+}
