@@ -14,9 +14,6 @@ let char = document.querySelector('#character')
 let quote = document.querySelector('#quote')
 let video = document.querySelector('#video')
 let audio = document.querySelector('#audio')
-console.log(video)
-console.log(audio)
-
 
 // Render Functions
 
@@ -53,7 +50,14 @@ function onLoadMovie(arr) {
     yr.textContent = arr.year
     char.textContent = arr.character
     quote.textContent = `Full Quote: "${arr.full_line}"`
+
     video.src = arr.video['1080p']
     audio.src = arr.audio
     console.log(arr.video['1080p'])
+
+    console.log(video)
+    console.log(audio)
+    video.src = arr.video['1080p']
+    audio.src = arr.audio
+
 }
