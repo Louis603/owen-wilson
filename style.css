@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header {
+    text-align: center;
+    background-color: #e8e689;
+    padding: 0.5em;
+}
+
+#top-list{
+    background-color: #e8e689;
+    align-items: center;
+    display: flex;
+}
+
+#img-list{
+    background-color: #e8e689;
+    align-items: center;
+    height: 30vh;
+    padding-left: 40px;
+}
+
+#poster {
+    text-align: center;
+}

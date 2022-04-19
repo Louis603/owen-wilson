@@ -6,13 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Phase 1 Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script defer src="index.js"></script>
   </head>
 
-  <body>  
-      <div id = 'top-list'> </div>
-      <h1>OWEN WILSON! WOW!!</h1>
+  <body>
+    <div id="header">
+      <h1>You've never said "wow" like this before</h1>
+    </div>
+
+
+    <div id="top-list">
+      <!---movie posters go here--> 
+      <p></p>
+      <img id = 'img-list' src="https://images.ctfassets.net/bs8ntwkklfua/4EY9GqHtORVXebFYywzgQP/32e3808e156a880c75063f42918390ef/Bottle_Rocket_Poster.jpg">
+    </div>
+    
+    <div>
+      <img id="poster" src ="https://images.ctfassets.net/bs8ntwkklfua/4EY9GqHtORVXebFYywzgQP/32e3808e156a880c75063f42918390ef/Bottle_Rocket_Poster.jpg" alt = "picture of movie" width = "300" height = "500">
+      
+      <p id='name'>MOVIE NAME</p>
+      <p id='year'>year</p>
+      <p id='character'>character</p>
+      <p id='quote'>movie quote</p>
+        
+      <video width = "320" height = "240" controls>
+        <source id= 'video' src = "https://videos.ctfassets.net/bs8ntwkklfua/ZVi6OFIq43MdyeZj2cEJ7/7bb62a6b5d5dffdb8d7092de559b7609/Bottle_Rocket_Wow_3_720p.mp4" >
+      </video>
+        
+      <audio controls>
+        <source id='audio' src = 'https://assets.ctfassets.net/bs8ntwkklfua/5xUOifToSk7ri9HUUZaPm4/07205e779c041f9702e86c2b7e3bfcff/Bottle_Rocket_Wow_3.mp3' type = "audio/mpeg">
+      </audio>
+      </div>
+      
+      
+       <h1>OWEN WILSON! WOW!!</h1>
       <h3>You've never said "wow" like this before</h3>
+      <p>current wow being played</p>
+      <p>total wows</p>
 
 
       <input type="text" name="name" >
