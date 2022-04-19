@@ -3,12 +3,17 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-family: "Copperplate", fantasy;
+    font-size: 25px;
 }
 
 #header {
     text-align: center;
     background-color: #e8e689;
     padding: 0.5em;
+    text-shadow: 2px 2px 2px white;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 #top-list{
@@ -16,6 +21,9 @@ body {
     align-items: center;
     display: flex;
     padding-bottom: 40px;
+    padding-top: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 #img-list{
@@ -23,10 +31,14 @@ body {
     align-items: center;
     height: 30vh;
     padding-left: 40px;
+
 }
 
 #poster {
     text-align: center;
+    border: 10px solid #e8e689;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .new-poster {
@@ -37,4 +49,17 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#video {
+    padding: 30px;
+}
+
+#audio {
+    padding: 30px
+}
+
+input {
+    margin-left: 600px;
+    margin-right: 600px;
 }
