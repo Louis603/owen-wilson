@@ -25,6 +25,8 @@ let audio = document.querySelector('#audio')
 let form = document.querySelector('#form')
 let vote = document.getElementById("vote-count")
 let userVote = document.getElementById('user-vote')
+let btn = document.getElementById('btn')
+let result = document.getElementById('result')
 
 // Render Functions
 const displayMovie = (arr) => {
@@ -54,7 +56,7 @@ function onLoadMovie(arr) {
 
 //CALLBACKS
 const handleClick = (e, arr) => {
-    //console.log(arr)
+    console.log(arr)
     poster.src = arr.poster
     movieName.textContent = arr.movie
     yr.textContent = `Released: ${arr.year}`
@@ -62,6 +64,15 @@ const handleClick = (e, arr) => {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+
+    let num1 = arr.total_wows_in_movie 
+    btn.addEventListener('click', function() {
+        let input = document.getElementById('guess').value
+        console.log(input)
+        if (input == num1){
+          result.textContent = 'CORRECT!'
+        }else result.textContent = 'WRONG!'
+      })
 
 }
 
