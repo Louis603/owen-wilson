@@ -22,6 +22,9 @@ let char = document.querySelector('#character')
 let quote = document.querySelector('#quote')
 let video = document.querySelector('#video')
 let audio = document.querySelector('#audio')
+let form = document.querySelector('#form')
+let vote = document.getElementById("vote-count")
+let userVote = document.getElementById('user-vote')
 
 // Render Functions
 const displayMovie = (arr) => {
@@ -44,6 +47,7 @@ function onLoadMovie(arr) {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+    userVote.textContent = ''
 }
 
 
@@ -58,6 +62,12 @@ const handleClick = (e, arr) => {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+
 }
 
 
+//FORM
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
+    userVote.textContent = vote.value
+})
