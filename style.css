@@ -5,19 +5,22 @@ body {
     flex-direction: column;
     font-family: "Copperplate", fantasy;
     font-size: 25px;
+    background: rgb(45, 43, 43);
+    color: rgb(80, 139, 242);
+    padding: 15px;
 }
 
 #header {
     text-align: center;
-    background-color: #e8e689;
+    background-color: rgb(80, 78, 78);
     padding: 0.5em;
-    text-shadow: 2px 2px 2px white;
+    text-shadow: 1px 1px 1px white, 2px 2px 15px rgb(47, 43, 47);
     border: 2px solid white;
     border-radius: 10px;
 }
 
 #top-list{
-    background-color: #e8e689;
+    background-color: rgb(80, 78, 78);
     align-items: center;
     display: flex;
     padding-bottom: 40px;
@@ -27,22 +30,28 @@ body {
 }
 
 #img-list{
-    background-color: #e8e689;
+    background-color: rgb(80, 78, 78);
     align-items: center;
     height: 30vh;
     padding-left: 40px;
 
 }
 
+#name {
+    text-decoration-line: underline;
+    text-underline-offset: 8px;
+    font-style: italic;
+}
+
 #poster {
     text-align: center;
-    border: 10px solid #e8e689;
+    border: 10px solid rgb(80, 78, 78);
     border-radius: 10px;
     padding: 20px;
 }
 
 .new-poster {
-  border: 1px solid rgb(7, 0, 0);
+  border: 1px solid white;
   border-radius: 10px;
   padding: 20px;
   width: 150px;
@@ -62,4 +71,5 @@ body {
 input {
     margin-left: 600px;
     margin-right: 600px;
+    margin-bottom: 75px;
 }
