@@ -66,6 +66,7 @@ const handleClick = (e, arr) => {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+    userVote.textContent = ''
     
 
     // let num1 = arr.total_wows_in_movie 
