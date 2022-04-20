@@ -25,6 +25,9 @@ let audio = document.querySelector('#audio')
 let form = document.querySelector('#form')
 let vote = document.getElementById("vote-count")
 let userVote = document.getElementById('user-vote')
+let btn = document.getElementById('btn')
+let result = document.getElementById('result')
+let divQuiz = document.getElementById('quiz')
 
 // Render Functions
 const displayMovie = (arr) => {
@@ -48,13 +51,14 @@ function onLoadMovie(arr) {
     video.src = arr.video['1080p']
     audio.src = arr.audio
     userVote.textContent = ''
+    btn.addEventListener('click',(e) => wowGuess(e, arr))
 }
 
 
 
 //CALLBACKS
 const handleClick = (e, arr) => {
-    //console.log(arr)
+    console.log(arr)
     poster.src = arr.poster
     movieName.textContent = arr.movie
     yr.textContent = `Released: ${arr.year}`
@@ -62,8 +66,29 @@ const handleClick = (e, arr) => {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+    
+
+    // let num1 = arr.total_wows_in_movie 
+    // console.log(num1)
+    btn.addEventListener('click',(e) => wowGuess(e, arr))
+      
 
 }
+
+//Guesser event callback
+function wowGuess(e, arr) {
+    let answer = arr.total_wows_in_movie 
+    let input = document.getElementById('guess').value
+    console.log(input)
+    if (input == answer){
+        let hidden = document.createElement('audio')
+        hidden.autoplay = 'autoplay'
+        hidden.src = 'https://assets.ctfassets.net/bs8ntwkklfua/5wTwFaxcgg9E4QIwUXTJK4/9fbcc04e27d5860c9bf3febf72c9f20d/Cars_Wow_1.mp3'
+        divQuiz.append(hidden)
+        result.textContent = 'CORRECT!'
+    }else result.textContent = 'WRONG!'
+  }
+
 
 
 //FORM
