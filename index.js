@@ -27,6 +27,7 @@ let vote = document.getElementById("vote-count")
 let userVote = document.getElementById('user-vote')
 let btn = document.getElementById('btn')
 let result = document.getElementById('result')
+let divQuiz = document.getElementById('quiz')
 
 // Render Functions
 const displayMovie = (arr) => {
@@ -80,7 +81,11 @@ function wowGuess(e, arr) {
     let input = document.getElementById('guess').value
     console.log(input)
     if (input == answer){
-      result.textContent = 'CORRECT!'
+        let hidden = document.createElement('audio')
+        hidden.autoplay = 'autoplay'
+        hidden.src = 'https://assets.ctfassets.net/bs8ntwkklfua/5wTwFaxcgg9E4QIwUXTJK4/9fbcc04e27d5860c9bf3febf72c9f20d/Cars_Wow_1.mp3'
+        divQuiz.append(hidden)
+        result.textContent = 'CORRECT!'
     }else result.textContent = 'WRONG!'
   }
 
