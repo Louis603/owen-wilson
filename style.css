@@ -73,3 +73,22 @@ input {
     margin-right: 600px;
     margin-bottom: 75px;
 }
+
+#quiz {
+    background-color: blueviolet;
+    border: 5px solid black;
+    height: 200px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  #guess {
+    width:50px;
+    margin: 10px;
+    
+  }
+  
+  #btn {
+    margin: 25px auto auto 5px;
+  }
