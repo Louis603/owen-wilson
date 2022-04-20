@@ -1,5 +1,4 @@
 //FETCHES
-//Movie info on load
 fetch("https://owen-wilson-wow-api.herokuapp.com/wows/ordered/29")
 .then(res => res.json())
 .then(arr => onLoadMovie(arr))
@@ -28,6 +27,7 @@ let userVote = document.getElementById('user-vote')
 let btn = document.getElementById('btn')
 let result = document.getElementById('result')
 let divQuiz = document.getElementById('quiz')
+let gifImg = document.querySelector('.gif')
 
 // Render Functions
 const displayMovie = (arr) => {
@@ -68,12 +68,7 @@ const handleClick = (e, arr) => {
     audio.src = arr.audio
     userVote.textContent = ''
     
-
-    // let num1 = arr.total_wows_in_movie 
-    // console.log(num1)
     btn.addEventListener('click',(e) => wowGuess(e, arr))
-      
-
 }
 
 //Guesser event callback
@@ -97,3 +92,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault()
     userVote.textContent = vote.value
 })
+
+//gif mouseover
+gifImg.addEventListener('mouseover', (e) => e.target.src = "owen-gif.gif")
+gifImg.addEventListener('mouseout', (e) => e.target.src = 'owen-still.jpg')
