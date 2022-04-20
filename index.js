@@ -50,6 +50,7 @@ function onLoadMovie(arr) {
     video.src = arr.video['1080p']
     audio.src = arr.audio
     userVote.textContent = ''
+    btn.addEventListener('click',(e) => wowGuess(e, arr))
 }
 
 
@@ -64,17 +65,25 @@ const handleClick = (e, arr) => {
     quote.textContent = `Full Quote: "${arr.full_line}"`
     video.src = arr.video['1080p']
     audio.src = arr.audio
+    
 
-    let num1 = arr.total_wows_in_movie 
-    btn.addEventListener('click', function() {
-        let input = document.getElementById('guess').value
-        console.log(input)
-        if (input == num1){
-          result.textContent = 'CORRECT!'
-        }else result.textContent = 'WRONG!'
-      })
+    // let num1 = arr.total_wows_in_movie 
+    // console.log(num1)
+    btn.addEventListener('click',(e) => wowGuess(e, arr))
+      
 
 }
+
+//Guesser event callback
+function wowGuess(e, arr) {
+    let answer = arr.total_wows_in_movie 
+    let input = document.getElementById('guess').value
+    console.log(input)
+    if (input == answer){
+      result.textContent = 'CORRECT!'
+    }else result.textContent = 'WRONG!'
+  }
+
 
 
 //FORM
