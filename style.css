@@ -75,6 +75,8 @@ input {
 }
 
 #quiz {
+    color: white;
+    text-shadow: 2px 2px 2px black;
     background-color: blueviolet;
     border: 5px solid black;
     height: 200px;
