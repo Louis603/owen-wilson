@@ -60,6 +60,11 @@ body {
   margin-right: auto;
 }
 
+#name, #year, #character, #quote {
+    text-shadow: 1px 1px 1px white, 2px 2px 10px black;
+
+}
+
 #video {
     padding: 30px;
 }
@@ -69,16 +74,26 @@ body {
 }
 
 input {
-    margin-left: 600px;
-    margin-right: 600px;
-    margin-bottom: 75px;
+    margin: auto;
+}
+
+#form-wrapper {
+    border: 5px solid rgb(80, 78, 78);
+    color: white;
+    text-shadow: 1px 1px 1px black, 2px 2px 10px black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 420px;
+    margin-right: 420px;
+    margin-bottom: 20px;
 }
 
 #quiz {
     color: white;
     text-shadow: 2px 2px 2px black;
-    background-color: rgb(49, 66, 63);
-    border: 5px solid rgb(80, 76, 76);
+    background-color: blueviolet;
+    border: 5px solid white;
+    border-radius: 10px;
     height: 200px;
     width: 600px;
     margin: auto;
