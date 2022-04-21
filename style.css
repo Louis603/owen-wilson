@@ -11,12 +11,16 @@ body {
 }
 
 #header {
-    text-align: center;
+    /* text-align: center; */
     background-color: rgb(80, 78, 78);
-    padding: 0.5em;
     text-shadow: 1px 1px 1px white, 2px 2px 15px rgb(47, 43, 47);
     border: 2px solid white;
     border-radius: 10px;
+    background-image: url('https://hawkchill.com/wp-content/uploads/2018/03/owen-wilson.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 260px;
+    background-blend-mode: lighten;
 }
 
 #top-list{
