@@ -13,7 +13,6 @@ body {
 #header {
     /* text-align: center; */
     background-color: rgb(80, 78, 78);
-    text-shadow: 1px 1px 1px white, 2px 2px 15px rgb(47, 43, 47);
     border: 2px solid white;
     border-radius: 10px;
     background-image: url('https://hawkchill.com/wp-content/uploads/2018/03/owen-wilson.jpg');
@@ -41,12 +40,6 @@ body {
 
 }
 
-#name {
-    text-decoration-line: underline;
-    text-underline-offset: 8px;
-    font-style: italic;
-}
-
 #poster {
     text-align: center;
     border: 10px solid rgb(80, 78, 78);
@@ -62,11 +55,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-#name, #year, #character, #quote {
-    text-shadow: 1px 1px 1px white, 2px 2px 10px black;
-
 }
 
 #video {
