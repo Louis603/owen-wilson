@@ -92,11 +92,18 @@ function wowGuess(e, arr) {
 }
 
 
-
+let voteRes = document.getElementById('vote-res')
 //FORM
 form.addEventListener('submit', function(e) {
     e.preventDefault()
     userVote.textContent = vote.value
+    if (parseInt(vote.value) <= 4){
+        voteRes.textContent = 'Not his best wow..'
+    }else if (parseInt(vote.value) >= 5 && parseInt(vote.value) <= 7){
+        voteRes.textContent = 'Pretty good'
+    }else if (parseInt(vote.value) > 7){
+        voteRes.textContent = 'That\'s an Owen Wilson Wow!'
+    }
     form.reset()
 })
 
