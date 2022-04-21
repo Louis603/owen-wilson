@@ -71,26 +71,40 @@ const handleClick = (e, arr) => {
     btn.addEventListener('click',(e) => wowGuess(e, arr))
 }
 
-//Guesser event callback
+//WOW GUESS CALLBACK
+let hidden = document.createElement('audio')
+
 function wowGuess(e, arr) {
     let answer = arr.total_wows_in_movie 
     let input = document.getElementById('guess').value
-    console.log(input)
+    
     if (input == answer){
-        let hidden = document.createElement('audio')
         hidden.autoplay = 'autoplay'
         hidden.src = 'https://assets.ctfassets.net/bs8ntwkklfua/5wTwFaxcgg9E4QIwUXTJK4/9fbcc04e27d5860c9bf3febf72c9f20d/Cars_Wow_1.mp3'
         divQuiz.append(hidden)
         result.textContent = 'CORRECT!'
-    }else result.textContent = 'WRONG!'
-  }
+    }else if(input !== answer) {
+        result.textContent = 'WRONG!'
+        hidden.src = ''
+    }
+    console.log(input)
+    console.log(answer)
+}
 
 
-
+let voteRes = document.getElementById('vote-res')
 //FORM
 form.addEventListener('submit', function(e) {
     e.preventDefault()
     userVote.textContent = vote.value
+    if (parseInt(vote.value) <= 4){
+        voteRes.textContent = 'Not his best wow..'
+    }else if (parseInt(vote.value) >= 5 && parseInt(vote.value) <= 7){
+        voteRes.textContent = 'Pretty good'
+    }else if (parseInt(vote.value) > 7){
+        voteRes.textContent = 'That\'s an Owen Wilson Wow!'
+    }
+    form.reset()
 })
 
 //gif mouseover
