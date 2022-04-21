@@ -61,6 +61,14 @@ body {
   margin-right: auto;
 }
 
+#name, #year, #character, #quote {
+    background-image: linear-gradient(to top, blueviolet 0%, lightblue 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
 #video {
     padding: 30px;
 }
