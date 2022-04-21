@@ -94,6 +94,7 @@ input {
     width: 600px;
     margin:auto;
     margin-bottom: 40px;
+    background-color: rgb(57, 102, 139);
 }
 
 #quiz {
@@ -106,6 +107,7 @@ input {
     width: 600px;
     margin: auto;
     text-align: center;
+    margin-bottom: 30px;
   }
   
   #guess {
@@ -130,4 +132,10 @@ input {
 
   #title-wilson{
       padding-bottom: 10px;
+  }
+
+  #footer {
+      background-color: rgb(45, 43, 43);
+      padding: 20px 0 0 20px;
+      border-top: 2px solid rgba(255, 255, 255, 0.288);
   }
