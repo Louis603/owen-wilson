@@ -12,7 +12,8 @@
 
   <body>
     <div id="header">
-      <h1 id="title-wilson">OWEN WILSON! WOW!!</h1>
+      <img id="header-img"src="https://hawkchill.com/wp-content/uploads/2018/03/owen-wilson.jpg" width="280" height="180">
+      <h1 id="title-wilson"></h1>
       <h1>You've never said <em>"wow"</em> like this before</h1>
     </div>
 
@@ -44,14 +45,16 @@
       <!-- <p>current wow being played:</p>
       <p>Guess total wows in the selected movie:</p> -->
       <div id="form-wrapper">
-      <p>
-        <span id = 'user-vote'></span> / 10
-      </p>
+        <h4>Rate Owen's wow</h4>
+        <p>Score : 
+          <span id = 'user-vote'></span>  / 10
+        </p>
+      <p id="vote-res"> </p>
 
       <form id="form">
-        <h4>Rate my wow</h4>
+        
         <label id="label"></label>
-        <input type="number" name="vote" id="vote-count">
+        <input type="number" name="vote" id="vote-count"><button>Vote!</button>
       </form>
       </div>
     
