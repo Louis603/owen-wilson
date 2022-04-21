@@ -28,17 +28,20 @@ let btn = document.getElementById('btn')
 let result = document.getElementById('result')
 let divQuiz = document.getElementById('quiz')
 let gifImg = document.querySelector('.gif')
+let scroll = document.getElementById('link')
 
 // Render Functions
 const displayMovie = (arr) => {
     //console.log(arr)
    let div = document.querySelector('#top-list')
    let img = document.createElement('img')
+   let scroll = document.createElement('a')
+   scroll.classList.add('link')
+   scroll.href = '#name'
    img.classList.add('new-poster')
    img.src = arr.poster
-   img.style.width = "100"
-   img.style.height = "200"
-   div.append(img)
+   scroll.append(img)
+   div.append(scroll)
    img.addEventListener('click', (e) => handleClick(e, arr))
 }
 
