@@ -72,7 +72,7 @@ body {
 }
 
 #name, #year, #character, #quote {
-    background-image: linear-gradient(to top, blueviolet 0%, lightblue 100%);
+    background-image: linear-gradient(to top, rgb(80, 139, 242) 0%, white 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
